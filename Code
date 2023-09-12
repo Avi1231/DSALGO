@@ -62,3 +62,23 @@ int main() {
   int decimalNum = binaryToDecimalMethod1(num);
   cout << decimalNum <<endl; 
 }
+_________________________________________________________________________________________________
+// MULTIPLY N NUMBERS ENTERED BY USER
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n, num, product = 1;
+  cout << "Enter value for n" <<endl;
+  cin >> n;
+  for(int i = 0; i < n; i++)
+  {
+       cout << "Enter number : " << (i+1) << endl;
+       cin >> num;
+       product *= num;
+  }
+  cout << "Product = " << product <<endl;
+  
+}
+====================================================================================================
