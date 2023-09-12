@@ -1,0 +1,38 @@
+/*Decimal to binary conversion*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int decimalToBinaryMethod1(int number)
+{
+    int binaryNumber = 0;
+    int i = 0;
+    while(number > 0)
+    {
+        int bit = number % 2;
+        binaryNumber = bit * pow(10, i) + binaryNumber;
+        i++;
+        number = number/2;
+    }
+    return binaryNumber;
+}
+int decimalToBinaryMethod2(int num)
+{
+  int binaryNum = 0, i = 0;
+  while(num)
+  {
+    int bit = (num&1);
+    binaryNum =  bit * pow(10, i++) + binaryNum;
+    num = num >> 1;
+  }
+  return binaryNum;
+}
+int main()
+{
+    int num;
+    cout << "Enter a number" <<endl;
+    cin >> num;
+    int binaryNum = decimalToBinaryMethod2(num);
+    cout << binaryNum <<endl;
+}
+________________________________________________________________________________________________________________________________________
