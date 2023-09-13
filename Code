@@ -91,11 +91,11 @@ int main()
       // outer loop
      for(int row = 0; row < 5; row++)
      {
-          // inner loop
           for(int col = 0; col < 5; col++)
           {    
               // if zeroth row or last row then print star
               if(row == 0 || row  == 4)
+          // inner loop
               {
                 cout << "* ";
               }
@@ -155,3 +155,24 @@ void pattern(int num)
       cout << endl;
     }
 }
+=========================================================================================
+// Hollow Inverted half pyramid
+void pattern(int num)
+{
+   for(int i = 0; i < num; i++)
+   {
+         for(int j = 0; j < num; j++)
+         {
+             if(i == 0 || j == 0 || j == num - i - 1)
+             {
+               cout << "* ";
+             }
+             else
+             {
+               cout << "  ";
+             }
+         }
+         cout << endl;
+   }
+}
+=========================================================================================
